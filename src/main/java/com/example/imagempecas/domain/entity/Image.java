@@ -18,7 +18,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -27,7 +26,8 @@ public class Image {
     private String name;
     @Column
     private Long size;
-    @Enumerated
+    @Column
+    @Enumerated(EnumType.STRING)
     private ImageExtension extension;
     @Column
     @CreatedDate

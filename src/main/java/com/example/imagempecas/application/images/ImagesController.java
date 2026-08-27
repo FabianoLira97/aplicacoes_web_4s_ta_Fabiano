@@ -12,9 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/images")
 @Slf4j
-
 public class ImagesController {
-    @PostMapping //TUDO QUE ESTÁ COM O @ É UMA ANOTAÇÃO
+    @PostMapping
     public ResponseEntity save(
             @RequestParam("file")MultipartFile file,
             @RequestParam("name") String name,
@@ -22,9 +21,8 @@ public class ImagesController {
     )
     {
         log.info("Imagem recebida: name: {}, size: {}", file.getOriginalFilename(), file.getSize());
-        log.info("nome definido para a imagem: {}", name);
+        log.info("Nome definido para a imagem: {}", name);
         log.info("Tags: {}", tags);
         return ResponseEntity.ok().build();
-
     }
 }
