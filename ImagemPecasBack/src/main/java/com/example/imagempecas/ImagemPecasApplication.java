@@ -1,4 +1,4 @@
-package com.example.imagemPecas;
+package com.example.imagempecas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
